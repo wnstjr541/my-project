@@ -17,7 +17,6 @@ const Main = () => {
             Contact: 4
         };
 
-        console.log(focusTarget.current)
         //category의 name의 키값과 같은 컴포넌트로 이동
         focusTarget.current[navList[name]].scrollIntoView({ behavior: 'smooth' });
         };

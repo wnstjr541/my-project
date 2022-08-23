@@ -17,10 +17,6 @@ const Home = ({focusTarget}) => {
                     <button className="home__contact">Contact Me</button>
                 </div>
             </section>
-            <Moment></Moment>
-            <Dayjs></Dayjs>
-            <Datefns></Datefns>
-
         {/* <!-- About --> */}
             <section id="about" className="section section__container" ref={el => (focusTarget.current[1] = el)}>
                 <h1>About me</h1>
