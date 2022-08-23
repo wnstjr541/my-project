@@ -1,5 +1,7 @@
 import React, { useRef } from 'react';
-import Moment from '../Moment';
+import Dayjs from '../libary/Dayjs';
+import Moment from '../libary/Moment';
+import Datefns from '../libary/Datefns';
 import './Home.css';
 
 const Home = ({focusTarget}) => {
@@ -16,6 +18,8 @@ const Home = ({focusTarget}) => {
                 </div>
             </section>
             <Moment></Moment>
+            <Dayjs></Dayjs>
+            <Datefns></Datefns>
 
         {/* <!-- About --> */}
             <section id="about" className="section section__container" ref={el => (focusTarget.current[1] = el)}>
