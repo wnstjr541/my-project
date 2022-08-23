@@ -95,18 +95,18 @@ const Home = ({focusTarget}) => {
                 <div className="section__container">
                     <h1>My work</h1>
                     <div className="work__projects">
-                        <a href="Offices/index.html" className="project" target="blank" data-type="front-end">
-                        <img
-                            src="imgs/projects/youtube.png"
-                            alt="관공서"
-                            className="project__img"
-                        />
-                        <div className="project__description">
-                            <h3>관공서</h3>
-                            <span>Clone coding with HTML, CSS, JavaScript, jquery</span>
-                        </div>
+                        <a href="../Offices/index.html" className="project" target="blank" data-type="front-end">
+                            <img
+                                src="imgs/projects/youtube.png"
+                                alt="관공서"
+                                className="project__img"
+                            />
+                            <div className="project__description">
+                                <h3>관공서</h3>
+                                <span>Clone coding with HTML, CSS, JavaScript, jquery</span>
+                            </div>
                         </a>
-                        <a href="https://jun-tube.netlify.app" className="project" data-type="front-end" target="_blank">
+                        <a href="https://wnstjr541.github.io/my-youtube/" className="project" data-type="front-end" target="_blank">
                             <img className="project__img" src="imgs/projects/woolworth2.png" alt="" />
                             <div className="project__description">
                                 <h3>react youtube</h3>
@@ -116,7 +116,7 @@ const Home = ({focusTarget}) => {
                         <a href="https://github.com/wnstjr541/CardMaker/" className="project" data-type="front-end">
                             <img className="project__img" src="imgs/projects/woolworth2.png" alt="" />
                             <div className="project__description">
-                                <h3>react CardMaker</h3>
+                                <h3>kakao map</h3>
                                 <span>react</span>
                             </div>
                         </a>
