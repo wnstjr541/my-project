@@ -113,7 +113,7 @@ const Home = ({focusTarget}) => {
                                 <span>react</span>
                             </div>
                         </a>
-                        <a href="https://github.com/wnstjr541/CardMaker/" className="project" data-type="front-end">
+                        <a href="https://wnstjr541.github.io/my-map/" className="project" data-type="front-end">
                             <img className="project__img" src="imgs/projects/woolworth2.png" alt="" />
                             <div className="project__description">
                                 <h3>kakao map</h3>
