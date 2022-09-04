@@ -1,20 +1,39 @@
 import React, { useRef } from 'react';
-import Dayjs from '../libary/Dayjs';
-import Moment from '../libary/Moment';
-import Datefns from '../libary/Datefns';
+import ReactTypingEffect from 'react-typing-effect';
 import './Home.css';
+import  youtube from "../../imgs/youtube.jpg";
+import  kakaoMap from "../../imgs/kakaoMap.jpg";
+import  coin from "../../imgs/coin.jpg";
+import  office from "../../imgs/office.jpg";
 
-const Home = ({focusTarget}) => {
+const Home = ({focusTarget , scrollTo}) => {
     return (
         <>
-            <section id="home"  ref={el => (focusTarget.current[0] = el)}>
-                <div className="home__container">
-                    <div className="typing"></div>
-                    <h1 className="home__title">Hello, I'm jun</h1>
-                    <h2 className="home__description">
-                        I'm a web front-end
-                    </h2>
-                    <button className="home__contact">Contact Me</button>
+            <section id="home"  ref={el => (focusTarget.current[0] = el)} >
+                <div className="home__container" >
+                    <ReactTypingEffect
+                        text={["안녕하세요", "어제보다 오늘 더 노력하는" , "프론트엔드 개발자 안준석 입니다."]}
+                        typingDelay={100}
+                        speed={100}
+                        eraseDelay={200}
+                        eraseSpeed={100}
+                        displayTextRenderer={(text, i) => {
+                            return (
+                            <h1>
+                                {text.split('').map((char, i) => {
+                                    const key = `${i}`;
+                                    return (
+                                    <span
+                                        key={key}
+                                        style={ { color: 'white' , fontSize: "26px"}}
+                                    >{char}</span>
+                                    );
+                                })}
+                            </h1>
+                            );
+                        }}/>
+                    <br />
+                    <button className="home__contact" onClick={scrollTo}>Contact</button>
                 </div>
             </section>
         {/* <!-- About --> */}
@@ -79,7 +98,7 @@ const Home = ({focusTarget}) => {
                             <div className="skill">
                                 <div className="skill__description">
                                     <span>React</span>
-                                    <span>60%</span>
+                                    <span>80%</span>
                                 </div>
                                 <div className="skill__bar">
                                     <div className="skill__value" ></div>
@@ -95,47 +114,38 @@ const Home = ({focusTarget}) => {
                 <div className="section__container">
                     <h1>My work</h1>
                     <div className="work__projects">
-                        <a href="../Offices/index.html" className="project" target="blank" data-type="front-end">
-                            <img
-                                src="imgs/projects/youtube.png"
-                                alt="관공서"
-                                className="project__img"
-                            />
-                            <div className="project__description">
-                                <h3>관공서</h3>
-                                <span>Clone coding with HTML, CSS, JavaScript, jquery</span>
-                            </div>
-                        </a>
                         <a href="https://wnstjr541.github.io/my-youtube/" className="project" data-type="front-end" target="_blank">
-                            <img className="project__img" src="imgs/projects/woolworth2.png" alt="" />
+                            <img className="project__img" src={youtube} alt="youtube" />
                             <div className="project__description">
                                 <h3>react youtube</h3>
                                 <span>react</span>
                             </div>
                         </a>
-                        <a href="https://unique-figolla-ed5a90.netlify.app" className="project" data-type="front-end">
-                            <img className="project__img" src="imgs/projects/woolworth2.png" alt="" />
+                        <a href="https://unique-figolla-ed5a90.netlify.app" className="project" data-type="front-end" target="_blank">
+                            <img className="project__img" src={kakaoMap} alt="kakao map" />
                             <div className="project__description">
                                 <h3>kakao map</h3>
                                 <span>react</span>
                             </div>
                         </a>
-                        <a href="Responsive_web/index.html" className="project" target="blank" data-type="front-end">
-                            <img
-                                src="imgs/projects/youtube.png"
-                                alt="반응형 웹"
-                                className="project__img"
-                            />
+                        
+                        <a href="https://wnstjr541.github.io/my-coin/" className="project" target="blank" data-type="front-end">
+                            <img className="project__img" src={coin} alt="coin" />
                             <div className="project__description">
-                                <h3>반응형 웹</h3>
+                                <h3>coin page</h3>
+                                <span>react</span>
+                            </div>
+                        </a>
+                        <a href="https://wnstjr541.github.io/my-offices/" className="project" target="blank" data-type="front-end">
+                        <img className="project__img" src={office} alt="관공서" />
+                            <div className="project__description">
+                                <h3>관공서</h3>
                                 <span>Clone coding with HTML, CSS, JavaScript, jquery</span>
                             </div>
                         </a>
                     </div>
                 </div>
             </section>
-
-
             {/* <!-- Contact --> */}
             <section id="contact" className="section"  ref={el => (focusTarget.current[4] = el)}>
                 <h1 className="contact__title">email talk</h1>

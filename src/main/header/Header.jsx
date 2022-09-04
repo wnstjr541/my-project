@@ -1,9 +1,9 @@
 import React from 'react';
 import './Header.css'
 
-const Header = ({scrollTo}) => {
+const Header = ({scrollTo , hideElement}) => {
     return (
-        <div id="navbar">
+        <div id={hideElement === false ? "navbar" : "navbarGray"} >
             <div className="navbar__logo"><i className="fas fa-cat"></i>
                 <a href="#">jun</a>
             </div>

@@ -11,8 +11,6 @@ const Moment = () => {
         setDay(moment(event.target.value , "YYYY-MM-DD").format("dddd"))
     }
 
-    console.log(days)
-
     const momentDate = moment();
     const newMomentDate = momentDate.add(1, "week");
     const cloneNewMomentDate = newMomentDate.clone().add(1,"week");
