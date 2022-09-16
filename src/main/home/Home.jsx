@@ -5,6 +5,8 @@ import  youtube from "../../imgs/youtube.jpg";
 import  kakaoMap from "../../imgs/kakaoMap.jpg";
 import  coin from "../../imgs/coin.jpg";
 import  office from "../../imgs/office.jpg";
+import  note from "../../imgs/note.jpg";
+import Chart from '../Chart';
 
 const Home = ({focusTarget , scrollTo}) => {
     return (
@@ -65,47 +67,7 @@ const Home = ({focusTarget , scrollTo}) => {
                 <div className="section__container">
                     <h1>Skills</h1>
                     <h2>Skills & Attributes</h2>
-                    <div className="skillset">
-                        <div className="skillset__left">
-                            <h3 className="skillset__title">Skills</h3>
-                            <div className="skill">
-                                <div className="skill__description">
-                                    <span>HTML</span>
-                                    <span>90%</span>
-                                </div>
-                                <div className="skill__bar">
-                                    <div className="skill__value"></div>
-                                </div>
-                            </div>
-                            <div className="skill">
-                                <div className="skill__description">
-                                    <span>CSS</span>
-                                    <span>90%</span>
-                                </div>
-                                <div className="skill__bar">
-                                    <div className="skill__value"></div>
-                                </div>
-                            </div>
-                            <div className="skill">
-                                <div className="skill__description">
-                                    <span>JavaScript</span>
-                                    <span>80%</span>
-                                </div>
-                                <div className="skill__bar">
-                                    <div className="skill__value"></div>
-                                </div>
-                            </div>
-                            <div className="skill">
-                                <div className="skill__description">
-                                    <span>React</span>
-                                    <span>80%</span>
-                                </div>
-                                <div className="skill__bar">
-                                    <div className="skill__value" ></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <Chart></Chart>
                 </div>
             </section>
 
@@ -113,19 +75,20 @@ const Home = ({focusTarget , scrollTo}) => {
             <section id="work" className="section"  ref={el => (focusTarget.current[3] = el)}>
                 <div className="section__container">
                     <h1>My work</h1>
+                    <br />
                     <div className="work__projects">
                         <a href="https://wnstjr541.github.io/my-youtube/" className="project" data-type="front-end" target="_blank">
                             <img className="project__img" src={youtube} alt="youtube" />
                             <div className="project__description">
                                 <h3>react youtube</h3>
-                                <span>react</span>
+                                <span>HTML, CSS, JavaScript, react, youtube Api</span>
                             </div>
                         </a>
                         <a href="https://unique-figolla-ed5a90.netlify.app" className="project" data-type="front-end" target="_blank">
                             <img className="project__img" src={kakaoMap} alt="kakao map" />
                             <div className="project__description">
                                 <h3>kakao map</h3>
-                                <span>react</span>
+                                <span>HTML, CSS, JavaScript, react, kakao Api</span>
                             </div>
                         </a>
                         
@@ -133,7 +96,14 @@ const Home = ({focusTarget , scrollTo}) => {
                             <img className="project__img" src={coin} alt="coin" />
                             <div className="project__description">
                                 <h3>coin page</h3>
-                                <span>react</span>
+                                <span>HTML, CSS, JavaScript, react, ReactApexChart</span>
+                            </div>
+                        </a>
+                        <a href="https://wnstjr541.github.io/typenote/" className="project" target="blank" data-type="front-end">
+                        <img className="project__img" src={note} alt="타입스크립트" />
+                            <div className="project__description">
+                                <h3>note page</h3>
+                                <span>HTML, CSS, JavaScript, react, typescript</span>
                             </div>
                         </a>
                         <a href="https://wnstjr541.github.io/my-offices/" className="project" target="blank" data-type="front-end">
