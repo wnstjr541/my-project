@@ -1,12 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import ReactTypingEffect from 'react-typing-effect';
 import './Home.css';
 import  youtube from "../../imgs/youtube.jpg";
 import  kakaoMap from "../../imgs/kakaoMap.jpg";
 import  coin from "../../imgs/coin.jpg";
 import  office from "../../imgs/office.jpg";
-import  note from "../../imgs/note.jpg";
+import  note from "../../imgs/애견인.jpg";
 import Chart from '../Chart';
+import { Time } from '../../time';
+import { useEffect } from 'react';
 
 const Home = ({focusTarget , scrollTo}) => {
     return (
@@ -99,11 +101,11 @@ const Home = ({focusTarget , scrollTo}) => {
                                 <span>HTML, CSS, JavaScript, react, ReactApexChart</span>
                             </div>
                         </a>
-                        <a href="https://wnstjr541.github.io/typenote/" className="project" target="blank" data-type="front-end">
-                        <img className="project__img" src={note} alt="타입스크립트" />
+                        <a href="https://wnstjr541.github.io/dogPage/" className="project" target="blank" data-type="front-end">
+                        <img className="project__img" src={note} alt="쇼핑몰" />
                             <div className="project__description">
-                                <h3>note page</h3>
-                                <span>HTML, CSS, JavaScript, react, typescript</span>
+                                <h3>애견인</h3>
+                                <span>HTML, CSS, JavaScript, react , react-slick , react-toastify</span>
                             </div>
                         </a>
                         <a href="https://wnstjr541.github.io/my-offices/" className="project" target="blank" data-type="front-end">
