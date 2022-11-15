@@ -8,7 +8,7 @@ function Chart(){
                 series={[
                     {
                         name: "숙련도",
-                        data: [80, 80, 80, 90, 60],
+                        data: [80, 80, 80, 90],
                     },
                 ]}
                 options={{
@@ -38,7 +38,7 @@ function Chart(){
                         },
                     },  
                     xaxis: {
-                        categories: ["html" , "css" , "javaScript" , "react" , "typescript"],
+                        categories: ["html" , "css" , "javaScript" , "react" ],
                     },  
                     yaxis: {
                         min : 32,
